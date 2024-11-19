@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\API",
-    "\\Persistence",
-    "\\Persistence\\Migrations"
+    "\\API"
   ],
-  "SelectedNode": "\\Reactivities.sln",
+  "SelectedNode": "\\API\\API.csproj",
   "PreviewInSolutionExplorer": false
 }
