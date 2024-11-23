@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Domain;
@@ -25,7 +22,9 @@ namespace API.Controllers
         [HttpGet("{id}")] // api/activities/{id}
         public async Task<ActionResult<Activity>> GetActivity(Guid id)
         {
-            return await _context.Activities.FindAsync(id);
+            var activity = await _context.Activities.FindAsync(id);
+            if (activity == null) return NotFound();
+            return activity;
         }
     }
 }
